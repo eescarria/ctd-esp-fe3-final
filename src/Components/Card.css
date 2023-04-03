@@ -2,3 +2,9 @@ img {
     width: 130px;
     
 }
+
+.card{
+    border-style: solid;
+    border-color:grey;
+    border-width: 0.5px;
+}

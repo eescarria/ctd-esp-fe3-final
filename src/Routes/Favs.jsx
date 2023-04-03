@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useReducer, useState } from "react";
 import Card from "../Components/Card";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
+  
+  const favRecovered = localStorage.getItem("favs")
+  const [fav, setFav] = useState(JSON.parse(favRecovered))
 
   return (
     <>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
+        <Card dentist={fav}/>        
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}
       </div>

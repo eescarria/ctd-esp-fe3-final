@@ -1,0 +1,18 @@
+footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logos, .powered{
+    display: flex;
+    justify-content: space-around;
+    
+    width: 250px;
+}
+
+.logos img{
+    background-color: black;
+    width: 30px;
+    height: 30px;
+}
+

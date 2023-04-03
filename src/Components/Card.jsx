@@ -1,11 +1,14 @@
-import React from "react";
-import './Card.css'
+import React, { useState } from "react";
+import '../index.css'
 
 
 const Card = ({dentist}) => {
 
+  
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
+    
+    localStorage.setItem("favs", JSON.stringify(dentist))
   }
 
   return (

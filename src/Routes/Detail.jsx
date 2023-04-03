@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import Card from '../Components/Card'
+import './Detail.css'
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
@@ -24,8 +24,26 @@ useEffect(()=>{
   return (
     <>
       <h1>Detail Dentist id {id} </h1>
-      <Card dentist={dentist}/>
-      {dentist.email}
+      <div className='contenedorDetail'>
+        <div className='cardDetail'>
+          <span className='leyenda'>Name</span>
+          <span>{dentist.name}</span>        
+        </div>
+        <div className='cardDetail'>
+          <span className='leyenda'>Email</span>
+          <span>{dentist.email}</span>        
+        </div>
+        <div className='cardDetail'>
+          <span className='leyenda'>Phone</span>
+          <span>{dentist.phone}</span>        
+        </div>
+        <div className='cardDetail'>
+          <span className='leyenda'>Website</span>
+          <span>{dentist.website}</span>        
+        </div>
+      </div>
+      
+            
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
     </>
