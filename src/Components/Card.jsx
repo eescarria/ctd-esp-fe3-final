@@ -30,6 +30,7 @@ const Card = ({dentist}) => {
         {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
         
         <button onClick={addFav} className="favButton">⭐</button>
+        
     </div>
   );
 };
