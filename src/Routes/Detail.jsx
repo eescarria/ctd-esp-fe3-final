@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import './Detail.css'
+
 
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Detail = () => {
+
     const [dentist, setDentist] = useState({})
 
     const { id } = useParams()
@@ -22,24 +23,25 @@ const Detail = () => {
   return (
     <>
       <h1>Detail Dentist id {id} </h1>
-      <div className='contenedorDetail'>
-        <div className='cardDetail'>
-          <span className='leyenda'>Name</span>
-          <span>{dentist.name}</span>        
-        </div>
-        <div className='cardDetail'>
-          <span className='leyenda'>Email</span>
-          <span>{dentist.email}</span>        
-        </div>
-        <div className='cardDetail'>
-          <span className='leyenda'>Phone</span>
-          <span>{dentist.phone}</span>        
-        </div>
-        <div className='cardDetail'>
-          <span className='leyenda'>Website</span>
-          <span>{dentist.website}</span>        
-        </div>
-      </div>
+      <table>
+      <thead>
+        <tr>
+          <td>Name</td>
+          <td>Email</td>
+          <td>Phone</td>
+          <td>Website</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{dentist.name}</td>
+          <td>{dentist.email}</td>
+          <td>{dentist.phone}</td>
+          <td>{dentist.website}</td>
+        </tr>
+      </tbody>
+      </table>
+      
       
             
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}

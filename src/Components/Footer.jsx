@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer>
       <div>
-        <button className='botonBack' onClick={() => navigate(-1)}>Volver atrás</button>
+        <button className='botonBack' onClick={() => navigate(-1)}>Go Back</button>
       </div>
       
       <div className='powYLogos'>

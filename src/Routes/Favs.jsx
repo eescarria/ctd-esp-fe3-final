@@ -1,5 +1,6 @@
 import React, { useReducer, useState } from "react";
 import Card from "../Components/Card";
+import { useContextGlobal } from "../Components/utils/global.context";
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
@@ -9,6 +10,8 @@ const Favs = () => {
   let parsedFavs = JSON.parse(favRecovered) || []
   console.log(parsedFavs)
   //const [fav, setFav] = useState(JSON.parse(favRecovered))
+
+  //const {favState} = useContextGlobal()
 
   return (
     <>

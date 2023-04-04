@@ -32,10 +32,17 @@ nav{
 
 nav div{
   display: flex;
+  align-items: center;
 }
 
 nav img{
   width: 80px;
+}
+
+nav button{
+  width: 50px;
+  height: 30px;
+  background-color: #050E42 ;
 }
 
 a{
@@ -142,8 +149,12 @@ tr:nth-child(even) {
   background-color: #12121296;
   color: white;
 }
-.dark > a {
+.dark a {
   color: white;
+}
+
+.dark nav button{
+  background-color: #D7E0E0
 }
 
 .card img{
