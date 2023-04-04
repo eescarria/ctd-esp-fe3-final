@@ -8,6 +8,7 @@ import Favs from "./Routes/Favs";
 import Home from "./Routes/Home";
 
 
+
 function App() {
   return (
       <div className="App">
