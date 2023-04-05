@@ -1,4 +1,3 @@
-import React, { useReducer, useState } from "react";
 import Card from "../Components/Card";
 import { useContextGlobal } from "../Components/utils/global.context";
 
@@ -6,19 +5,15 @@ import { useContextGlobal } from "../Components/utils/global.context";
 
 const Favs = () => {
   
-  const favRecovered = localStorage.getItem("favs")
-  let parsedFavs = JSON.parse(favRecovered) || []
-  console.log(parsedFavs)
-  //const [fav, setFav] = useState(JSON.parse(favRecovered))
-
-  //const {favState} = useContextGlobal()
+    
+  const {favState} = useContextGlobal()
 
   return (
     <>
       <h1>Dentists Favs</h1>
       <div className="card-grid">
-        {parsedFavs.map((fav,index) => (
-          <Card key ={index} dentist={fav.dentist}/>))}
+        {favState.map((fav,index) => (
+          <Card key ={index} dentist={fav}/>))}
                 
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}

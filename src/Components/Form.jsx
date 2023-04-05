@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import './Form.css'
+
 
 const Form = () => {
   //Aqui deberan implementar el form completo con sus validaciones
