@@ -6,18 +6,27 @@ import { useContextGlobal } from "../Components/utils/global.context";
 const Favs = () => {
   
     
-  const {favState} = useContextGlobal()
+  const {favState, favDispatch} = useContextGlobal()
+
+  const resetFavs = () =>{
+    favDispatch({type: 'RESET', payload: localStorage.clear()})
+  }
 
   return (
-    <>
-      <h1>Dentists Favs</h1>
-      <div className="card-grid">
+    <><div className="favs">
+        <h1>Dentists Favs</h1>
+        <div className="card-grid">
         {favState.map((fav,index) => (
           <Card key ={index} dentist={fav}/>))}
                 
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}
-      </div>
+        </div>
+        {(favState.length > 0) && 
+        <button className="reset" onClick={resetFavs}>Reset Favs</button>}
+
+    </div>
+      
     </>
   );
 };

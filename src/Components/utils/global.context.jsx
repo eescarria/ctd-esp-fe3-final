@@ -31,6 +31,8 @@ export const favReducer = (state, action) =>{
   switch(action.type){
     case 'ADD_FAV':
         return [...state, action.payload]
+    case 'RESET':
+        return initialStateFav
     default:
         throw new Error()
   }
@@ -42,7 +44,7 @@ export const ContextProvider = ({ children }) => {
   const [dentList, apiDispatch] = useReducer(apiReducer, initialState.data)
   const [themeState, themeDispatch] = useReducer(themeReducer, initialState.theme)
   const [favState, favDispatch] = useReducer(favReducer, initialStateFav)
-  
+    
 
   const url = "https://jsonplaceholder.typicode.com/users"
 
