@@ -19,6 +19,10 @@ code {
   cursor: pointer;
 }
 
+.favButton:hover{
+  background-color: lightskyblue;
+}
+
 h1{
   text-align: center;
 }
@@ -118,6 +122,21 @@ form{
   height: 100px;
   margin: 0 auto;
   margin-bottom: 20px;
+  font-weight: bold;
+}
+
+form button {
+  border-radius: 15px;
+  padding: 5px;
+  font-weight: bold;
+  background-color: lightseagreen;
+  border: none;
+  color: white;
+}
+
+form button:hover{
+  background-color: lightblue;
+  
 }
 
 .error{
@@ -194,8 +213,15 @@ tr:nth-child(even) {
 
 .reset{
   width: 20%;
+  padding: 5px;
   margin: 10px;
   font-weight: bold;
-  background-color: #F8B7B1;
-  
+  background-color: lightseagreen;
+  border: none;
+  border-radius: 15px;
+  color: white;
+}
+
+.reset:hover{
+  background-color: lightblue;
 }
