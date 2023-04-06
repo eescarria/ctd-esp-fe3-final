@@ -2,15 +2,19 @@ import { useContextGlobal } from "./utils/global.context";
 import { Link } from 'react-router-dom'
 
 
+
+
 const Card = ({dentist}) => {
 
   const {favDispatch} = useContextGlobal()
     
-    
+  
+  
   const addFav = ()=>{
     // Aqui iria la logica para agregar la Card en el localStorage
-    favDispatch({type: 'ADD_FAV', payload: dentist})
     
+      favDispatch({type: 'ADD_FAV', payload: dentist})
+        
   }
 
     

@@ -5,7 +5,6 @@ import { useContextGlobal } from "../Components/utils/global.context";
 
 const Favs = () => {
   
-    
   const {favState, favDispatch} = useContextGlobal()
 
   const resetFavs = () =>{
